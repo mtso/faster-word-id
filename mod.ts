@@ -17,7 +17,6 @@ export async function generateWordId (options: Options) {
   const join = options.join || '-';
 
   const words = <string[]>[];
-  // const buf = new Uint32Array(wordCount);
   return new Promise((resolve, reject) => {
     randomBytes(wordCount, (err, buf?: Buffer) => {
       if (err) return reject(err);
